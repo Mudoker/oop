@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane id="body" fx:id="body" prefHeight="600.0" prefWidth="900.0" styleClass="body-style" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.genievideostore.WelcomeScreenController">
+    <Pane StackPane.alignment="CENTER">
+        <ImageView fitHeight="432.0" fitWidth="862.0" layoutX="14.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@icon/img1.jpeg" />
+            </image>
+        </ImageView>
+        <Pane layoutX="160.0" layoutY="77.0" prefHeight="354.0" prefWidth="670.0">
+            <Label id="frame-1" fx:id="frame1" layoutX="200.0" layoutY="56.0" prefHeight="39.0" prefWidth="358.0" styleClass="frame-1" text="!!!Welcome to Genie VideoStore App!!!" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="Arial Bold" size="19.0" />
+                </font>
+            </Label>
+            <Label id="frame-2" fx:id="frame2" layoutX="306.0" layoutY="118.0" prefHeight="39.0" prefWidth="145.0" text="Team 11" textAlignment="CENTER" textFill="#fffefe">
+                <font>
+                    <Font name="SansSerif Bold" size="30.0" />
+                </font>
+            </Label>
+            <Label id="frame-3" fx:id="frame3" layoutX="272.0" layoutY="272.0" prefHeight="36.0" prefWidth="212.0" text="Start now !" textAlignment="CENTER" textFill="WHITE">
+                <font>
+                    <Font name="SansSerif Bold" size="36.0" />
+                </font>
+            </Label>
+            <Button fx:id="startButton" layoutX="259.0" layoutY="207.0" onMouseClicked="#onGetStartButton" prefHeight="48.0" prefWidth="212.0" text="Get Started">
+            <cursor>
+               <Cursor fx:constant="HAND" />
+            </cursor></Button>
+        </Pane>
+    </Pane>
+</StackPane>

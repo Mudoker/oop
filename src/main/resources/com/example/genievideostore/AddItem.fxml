@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefWidth="900.0" styleClass="linear-grad" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.genievideostore.AddItemController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="300.0" styleClass="linear-grad" stylesheets="@css/userUI.css">
+            <children>
+                <Pane fx:id="pane" prefHeight="226.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/PngItem_1468479.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="nameDisplayLabel" alignment="CENTER" layoutX="3.0" layoutY="175.0" prefHeight="40.0" prefWidth="293.0" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font></Label>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="140.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/user-avatar.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+                <Button mnemonicParsing="false" onMouseClicked="#onItemManagementButton" prefHeight="60.0" prefWidth="300.0" styleClass="navbutton" stylesheets="@css/userUI.css" text="ITEM MANAGEMENT" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onAccountManagementButton" prefHeight="60.0" prefWidth="300.0" styleClass="navbutton" stylesheets="@css/userUI.css" text="ACCOUNT MANAGEMENT" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onResolveBanButton" prefHeight="60.0" prefWidth="300.0" styleClass="navbutton" text="BAN RESOLVE" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onLogOutButton" prefHeight="60.0" prefWidth="300.0" styleClass="navbutton" text="LOG OUT" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font></Button>
+            </children></VBox>
+      <AnchorPane layoutX="300.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Label alignment="TOP_CENTER" layoutY="7.0" prefHeight="40.0" prefWidth="348.0" text="ADD ITEM PAGE" textFill="#ff0909">
+               <font>
+                  <Font name="SansSerif Italic" size="37.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <HBox layoutX="300.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="222.0" spacing="30.0">
+               <children>
+                  <Label graphicTextGap="0.0" text="Title:" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="0.0" text="Rental Type:" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="0.0" text="Loan Type:" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="0.0" text="Rental Fee:" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="0.0" text="Stock:" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label graphicTextGap="0.0" text="Year" textFill="#d311e1">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="genreLabel" graphicTextGap="0.0" text="Genre" textFill="#d311e1" visible="false">
+                     <font>
+                        <Font name="Arial" size="29.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="300.0" spacing="25.0">
+               <children>
+                  <TextArea fx:id="titleArea" prefHeight="33.0" prefWidth="200.0" promptText="Type title of new item">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <MenuButton fx:id="rentalTypeMenu" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" prefHeight="33.0" prefWidth="331.0" text="Choose rental type" textFill="#ae8989">
+                     <items>
+                        <MenuItem fx:id="DVD" mnemonicParsing="false" onAction="#setDVDText" text="DVD" />
+                        <MenuItem fx:id="Record" mnemonicParsing="false" onAction="#setMovieText" text="Old Movie Record" />
+                        <MenuItem fx:id="Game" mnemonicParsing="false" onAction="#setGameText" text="Video Game" />
+                     </items>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <MenuButton fx:id="loanTypeMenu" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="33.0" prefWidth="300.0" text="Choose loan type" textFill="#ae8989">
+                     <items>
+                        <MenuItem fx:id="twoDay" mnemonicParsing="false" onAction="#setDayLoanType" text="2-day" />
+                        <MenuItem fx:id="oneWeek" mnemonicParsing="false" onAction="#setWeekLoanType" text="1-week" />
+                     </items>
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin>
+                  </MenuButton>
+                  <TextArea fx:id="feeArea" prefHeight="33.0" prefWidth="331.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin></TextArea>
+                  <TextArea fx:id="stockArea" prefHeight="33.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin></TextArea>
+                  <TextArea fx:id="yearArea" prefHeight="33.0" prefWidth="300.0">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin></TextArea>
+                  <MenuButton fx:id="genreMenu" mnemonicParsing="false" prefHeight="40.5" prefWidth="331.0" text="Choose item genre" textFill="#ae8989" visible="false">
+                    <items>
+                      <MenuItem fx:id="Horror" mnemonicParsing="false" onAction="#setHorrorType" text="Horror" />
+                      <MenuItem fx:id="Comedy" mnemonicParsing="false" onAction="#setComedyType" text="Comedy" />
+                        <MenuItem fx:id="Action" mnemonicParsing="false" onAction="#setActionType" text="Action" />
+                    </items>
+                  </MenuButton>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" layoutX="300.0" layoutY="550.0" prefHeight="50.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" text="Submit" />
+         </children>
+      </HBox>
+      <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="829.0" prefHeight="63.0" prefWidth="640.0" textFill="#ebe7e7">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Pane fx:id="loaderPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="450.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/loader.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children></AnchorPane>

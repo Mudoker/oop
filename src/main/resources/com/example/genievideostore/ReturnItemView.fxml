@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane styleClass="linear-grad" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.genievideostore.ReturnController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="300.0" styleClass="linear-grad" stylesheets="@css/userUI.css">
+            <children>
+                <Pane prefHeight="226.0" prefWidth="300.0">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/PngItem_1468479.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="nameDisplayLabel" alignment="CENTER" layoutX="3.0" layoutY="175.0" prefHeight="40.0" prefWidth="293.0" textFill="WHITE">
+                            <font>
+                                <Font size="14.0" />
+                            </font></Label>
+                        <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="140.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/user-avatar.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+                <Button mnemonicParsing="false" onMouseClicked="#onHomePageButton" prefHeight="40.0" prefWidth="300.0" stylesheets="@css/userUI.css" text="PROFILE" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onHistoryButton" prefHeight="40.0" prefWidth="300.0" stylesheets="@css/userUI.css" text="VIEW MY HISTORY" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onRentButton" prefHeight="40.0" prefWidth="300.0" text="RENT" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onReturnButton" prefHeight="40.0" prefWidth="300.0" text="RETURN" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onExtendButton" prefHeight="40.0" prefWidth="300.0" text="EXTEND YOUR RENTAL" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+                <Button mnemonicParsing="false" onMouseClicked="#onLogOutButton" prefHeight="40.0" prefWidth="299.0" text="LOG OUT" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="navbutton" />
+                        <String fx:value="buttonMenu" />
+                    </styleClass></Button>
+            </children></VBox>
+        <Pane layoutX="300.0" layoutY="-4.0" prefHeight="215.0" prefWidth="602.0">
+            <children>
+                <Label layoutX="26.0" layoutY="75.0" prefHeight="47.0" prefWidth="363.0" styleClass="header-color" stylesheets="@css/userUI.css" text="RETURN YOUR ITEM" textFill="#1e09eb">
+                    <font>
+                        <Font name="Chalkboard" size="37.0" />
+                    </font>
+                </Label>
+                <Label layoutX="28.0" layoutY="127.0" prefHeight="32.0" prefWidth="442.0" text="Hint: Return your item will help you to be promoted faster !" textFill="#cc791f">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="searchBar" layoutX="16.0" layoutY="171.0" prefHeight="32.0" prefWidth="575.0" promptText="Enter item's ID or title in your rental list" style="-fx-background-color: white; -fx-border-color: orange; -fx-border-radius: 15;" />
+                <ImageView fitHeight="21.0" fitWidth="32.0" layoutX="558.0" layoutY="177.0" onMouseClicked="#onFindIcon" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@icon/search-interface-symbol.png" />
+                    </image>
+                </ImageView>
+                <VBox layoutX="525.0" layoutY="69.0" prefHeight="80.0" prefWidth="53.0">
+                    <children>
+                        <ImageView fitHeight="50.0" fitWidth="53.0" onMouseClicked="#onReturnIcon" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@icon/exchange.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="returnCountLabel" alignment="CENTER" prefHeight="29.0" prefWidth="52.0" text="0">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+                <Pane layoutX="-1.0" layoutY="36.0" prefHeight="32.0" prefWidth="296.0">
+                    <children>
+                        <Label layoutX="24.0" layoutY="1.0" styleClass="header-color" stylesheets="@css/userUI.css" text="Team 11">
+                            <font>
+                                <Font name="Chalkboard" size="20.0" />
+                            </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="3.0" layoutY="5.0" startX="100.0" startY="17.085674285888672" />
+                        <Label layoutX="109.0" layoutY="1.0" prefHeight="26.0" prefWidth="186.0" styleClass="header-color" stylesheets="@css/userUI.css" text="Return">
+                            <font>
+                                <Font name="Chalkboard" size="20.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <StackPane layoutX="300.0" layoutY="211.0" prefHeight="389.0" prefWidth="602.0">
+            <children>
+                <ScrollPane fx:id="searchPane" layoutX="10.0" layoutY="10.0" visible="false">
+                    <content>
+                        <AnchorPane fx:id="itemList1" minHeight="0.0" minWidth="0.0">
+                            <children>
+                                <GridPane fx:id="resultPane" alignment="CENTER" prefHeight="71.0" prefWidth="858.0" stylesheets="@css/userUI.css">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="109.4" minWidth="10.0" prefWidth="94.4" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="105.6" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="261.0" minWidth="0.0" prefWidth="150.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="130.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="130.79999999999995" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="130.0" minWidth="30.0" prefWidth="120.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="115.60000000000002" minWidth="13.399999999999977" prefWidth="23.399999999999977" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="106.0" text="ID">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" text="Type" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="22.0" prefWidth="44.0" text="Name" GridPane.columnIndex="2">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="45.0" text="Genre" GridPane.columnIndex="3">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="69.0" text="Rent Date" GridPane.columnIndex="4">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="114.0" text="Due Date" GridPane.columnIndex="5">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <styleClass>
+                                        <String fx:value="item-gridpane" />
+                                        <String fx:value="itemlabel" />
+                                    </styleClass>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+                <ScrollPane fx:id="defaultPane">
+                    <content>
+                        <AnchorPane fx:id="itemList" minHeight="0.0" minWidth="0.0">
+                            <children>
+                                <GridPane fx:id="pane" alignment="CENTER" layoutX="2.0" prefHeight="71.0" prefWidth="858.0" stylesheets="@css/userUI.css">
+                                    <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="109.4" minWidth="10.0" prefWidth="94.4" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="105.6" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="261.0" minWidth="0.0" prefWidth="150.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="130.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="130.79999999999995" minWidth="10.0" prefWidth="120.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="130.0" minWidth="30.0" prefWidth="120.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="115.60000000000002" minWidth="13.399999999999977" prefWidth="23.399999999999977" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="30.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="98.0" text="ID">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="108.0" text="Type" GridPane.columnIndex="1">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label prefHeight="22.0" prefWidth="44.0" text="Name" GridPane.columnIndex="2">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="46.0" prefWidth="45.0" text="Genre" GridPane.columnIndex="3">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="69.0" text="Rent Date" GridPane.columnIndex="4">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" prefHeight="36.0" prefWidth="114.0" text="Due Date" GridPane.columnIndex="5">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <styleClass>
+                                        <String fx:value="item-gridpane" />
+                                        <String fx:value="itemlabel" />
+                                    </styleClass>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </StackPane>
+        <Pane fx:id="loaderPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="450.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@icon/loader.gif" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>    </children>
+</AnchorPane>

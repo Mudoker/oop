@@ -1,0 +1,14 @@
+I001-2001,Medal of Honour 2,Game,1-week,26,3.6,true
+I002-1988,White Castle,Record,1-week,2,0.99,true,Comedy
+I003-1992,Alpha Dog,Record,1-week,2,1.99,true,Action
+I004-1999,Rat Race,DVD,1-week,6,1.99,true,Horror
+I005-2015,Halo,Game,2-day,11,4.99,true
+I006-2013,Halloween,DVD,2-day,0,0.99,false,Horror
+I007-2019,Doraemon,DVD,2-day,10,0.99,true,Horror
+I008-2020,HaHa,Game,2-day,0,0.99,false
+I009-2013,1234,DVD,2-day,1,0.99,false,Comedy
+I010-2019,Thor,DVD,1-week,10,100.0,true,Action
+I011-2009,Gia Dinh Phep Thuat,DVD,1-week,5,100.0,true,Comedy
+I012-1964,Godfather,Record,2-day,8,105.0,true,Comedy
+I013-2023,HULU,Game,1-week,120,120.0,true
+I014-2021,Hello World,Record,2-day,3,200.0,true,Horror

@@ -1,0 +1,86 @@
+					            MUST READ!!!: WE HIGHLY RECOMMEND YOU TO RUN THE APPLICATION USING WINDOW OS
+
+Possible conflicts between different operating systems (OS):
+During our testing, we have found that this application can sometimes behave unexpectedly.
+
++ On MacOS: the decimal point for double values might be replaced by a comma instead of a dot ("3,5 instead of 3.5"), making the application malfunction. We tested on two Macs, and one of them had this error.
+
++ On Window/MacOS: Sometimes there might be an error called "URI is not registered (Settings | Languages & Frameworks | Schemas and DTDs)" in the fxml files (xmlns="http://javafx.com/javafx/17.0.2-ea"). We have tested on 3 Window devices and 1 of them had this error.
+
+
+Hence, if you have any problems while running the application, please contact us so that we can give you an alternative way to continue using our application.
+
+
+												Project's Title: GENIE’S VIDEO STORE – GROUP 11
+The project aims to create a Java application that mimics a video rental store, including but not limited to renting items, returning items, showing rent history, and customer management. While the graphical user interface (GUI) will be mainly designed using JavaFX and CSS style sheets, its backend embraces object-oriented programming concepts using the Java programming language.
+Overall, customers can use the application to rent DVDs, records, or games and return them if necessary. If customers fail to return the item on time, they will be banned from renting new items in our store. However, VIP accounts can use their VIP points to extend the due date for their rented items and gain more points when renting new items. Moreover, only admins can resolve banned accounts, see all current customers, and add new items.
+
+How to install and run:
+Firstly, we highly recommend using JDK 19 or above to run the project to make sure there are no unwanted problems.
+Secondly, the project must be run from this file directory: "src/main/java/com/example/genievideostore/WelcomeScreen.java"
+Note: Re-arranging files’ directories or changing file content may lead to unexpected errors.
+
+Project instructions:
+Assumption: The database will only load and save when you log in and out of the application. As the database is short, to we make the loader icon showed for a short period of time before the functions are executed. Hence, the loader does not determine our application time complexity but it works as a part of the graphical user interface (the real running time may differ).
+
+Database Design:
+
+Customer.txt: The first line will contain information related to the corresponding customer. The remaining lines will contain their rental histories. If a user has not returned their item, the ‘Real Return Date’ will be '0' and the "Return Status will be 'false."
+
+File format: ID, Name, Address, Phone Number, Rent Quantity, Account Type, Username, Password, Ban Status
+		 Item ID, Rent Date, Due Date, Return Status, Real Return Date
+ 		 Item ID, Rent Date, Due Date, Return Status, Real Return Date
+  		 Item ID, Rent Date, Due Date, Return Status, Real Return Date
+		 …
+		 ID, Name, Address, Phone Number, Rent Quantity, Account Type, Username, Password, Ban Status
+		 Item ID, Rent Date, Due Date, Return Status, Real Return Date
+		 …
+
+Sample Dataset (the real dataset may differ but the format will remain the same):
+		 C001,Nguyen Dinh Viet,District 2,0949840521,25,VIP, s3927291, 10102003,false,30
+		 I001-2001,1685083340399,1685688140399,true,1685083356564
+		 I001-2001,1685083340399,1685688140399,true,1685083356565
+		 I002-1988,1685083368958,1685688168958,true,1685083380457
+		 I001-2001,1685083368958,1685688168958,true,1685083380457
+		 I005-2015,1685083399637,1685256199637,true,1685083407084
+		 I005-2015,1685083399637,1685256199637,true,1685083407084
+		 I005-2015,1685083399637,1685256199637,true,1685087919302
+		 I005-2015,1685173657876,1685346457876,true,1685173675294
+		 I002-1988,1685173694373,1685951294373,false,0
+		 C002,Tran Vu Quang Anh,District 8,0123456789,1,Guest, s3916566, 123456,true
+
+Item.txt: Each line will correspond to each item.
+File format: ID, Title, Rental Type, Loan Type, Stock, Price, Availability, Genre (game type will not have any genre)
+
+Sample Dataset (the real dataset may differ but the format will remain the same):
+
+		 I001-2001,Medal of Honour,Game,1-week,2,3.99,true
+		 I002-1988,White Castle,Record,1-week,1,0.99,true,Comedy
+
+Accounts that you can use to test (feel free to use the ‘Sign Up’ button to create your own account):
+
+Admin (Test admin functions):
++ Username: admin
++ Password: 123
+
+VIP account (Vip account can extend the due date by using VIP points):
++ Username: s3927291
++ Password: Felix1010
+
+Guest account (banned accounts cannot rent item):
++ Username: s3916566
++ Password: 12345678
+
+Guest account (not banned):
++ Username: s3927189
++ Password: 123456789
+
+
+
+Credits:
+Group 11:
++ S3927776: Doan Huu Quoc
++ S3927291: Nguyen Dinh Viet
++ S3927025: Ho Quoc Thai
++ S3927189: Phan Trong Nguyen
++ S3916566: Tran Vu Quang Anh

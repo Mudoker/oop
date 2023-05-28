@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="904.0" styleClass="linear-grad" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.genievideostore.UserScreenController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="300.0" styleClass="linear-grad" stylesheets="@css/userUI.css">
+         <children>
+            <Pane prefHeight="226.0" prefWidth="300.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="167.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/PngItem_1468479.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="nameDisplayLabel" alignment="CENTER" layoutX="3.0" layoutY="175.0" prefHeight="40.0" prefWidth="293.0" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="21.0" fitWidth="22.0" layoutX="140.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icon/user-avatar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" stylesheets="@css/userUI.css" text="PROFILE" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onViewHistoryButton" prefHeight="40.0" prefWidth="300.0" stylesheets="@css/userUI.css" text="VIEW MY HISTORY" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+            <Button fx:id="rentButton" mnemonicParsing="false" onMouseClicked="#onRentButton" prefHeight="40.0" prefWidth="300.0" text="RENT" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onReturnButton" prefHeight="40.0" prefWidth="300.0" text="RETURN" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onExtendButton" prefHeight="40.0" prefWidth="300.0" text="EXTEND YOUR RENTAL" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#onLogOutButton" prefHeight="40.0" prefWidth="299.0" text="LOG OUT" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="navbutton" />
+                  <String fx:value="buttonMenu" />
+               </styleClass>
+            </Button>
+         </children>
+      </VBox>
+      <ScrollPane layoutX="299.0" layoutY="1.0" prefHeight="600.0" prefWidth="606.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="898.0" prefWidth="604.0">
+               <children>
+                  <GridPane layoutX="40.0" layoutY="222.0" prefHeight="490.0" prefWidth="534.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Pane fx:id="displayNamePane" prefHeight="143.0" prefWidth="313.0" stylesheets="@css/userUI.css">
+                           <children>
+                              <Label layoutX="27.0" layoutY="13.0" prefHeight="42.0" prefWidth="117.0" text="Name">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="fullNameLabel" layoutX="27.0" layoutY="62.0" prefHeight="20.0" prefWidth="163.0" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="firstEditNameButton" fitHeight="21.0" fitWidth="21.0" layoutX="206.0" layoutY="109.0" onMouseClicked="#onFirstNameEditButton" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/user-avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="200.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/icons8-avatar-50.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/userUI.css" GridPane.columnIndex="1">
+                           <children>
+                              <Label layoutX="24.0" layoutY="13.0" prefHeight="42.0" prefWidth="117.0" text="Phone">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="phoneLabel" layoutX="24.0" layoutY="62.0" prefHeight="17.0" prefWidth="105.0" text="full name" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="198.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/phone-contact.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="202.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/lock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane fx:id="displayAddressPane" prefHeight="200.0" prefWidth="200.0" stylesheets="@css/userUI.css" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="42.0" prefWidth="117.0" text="Address">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="addressLabel" layoutX="24.0" layoutY="62.0" prefHeight="17.0" prefWidth="105.0" text="full name" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="firstEditAddressButton" fitHeight="21.0" fitWidth="21.0" layoutX="201.0" layoutY="100.0" onMouseClicked="#onFirstAddressEditButton" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/user-avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="197.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/icons8-location-50.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/userUI.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="23.0" layoutY="13.0" prefHeight="42.0" prefWidth="133.0" text="User Name">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="userNameLabel" layoutX="23.0" layoutY="62.0" prefHeight="17.0" prefWidth="105.0" text="full name" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="204.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/icons8-id-50.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="208.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/lock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/userUI.css" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="42.0" prefWidth="133.0" text="Password">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="passwordLabel" layoutX="24.0" layoutY="62.0" prefHeight="17.0" prefWidth="105.0" text="full name" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="196.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/icons8-password-50.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="firstEditPwdButton" fitHeight="21.0" fitWidth="21.0" layoutX="200.0" layoutY="102.0" onMouseClicked="#onPwdEditButton" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/user-avatar.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" stylesheets="@css/userUI.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Label layoutX="24.0" layoutY="18.0" prefHeight="42.0" prefWidth="174.0" text="Account Type">
+                                 <font>
+                                    <Font name="Chalkboard Bold Italic" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="accountTypeLabel" layoutX="24.0" layoutY="62.0" prefHeight="17.0" prefWidth="105.0" text="full name" textFill="GREY">
+                                 <font>
+                                    <Font name="System Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="29.0" layoutX="204.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/icons8-rank-64-black.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" layoutX="208.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon/lock.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane fx:id="editNamePane" prefHeight="202.0" prefWidth="240.0" stylesheets="@css/userUI.css" visible="false">
+                           <children>
+                              <Label layoutX="22.0" layoutY="14.0" prefHeight="42.0" prefWidth="117.0" text="Edit Name">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="newName" layoutX="21.0" layoutY="56.0" prefHeight="32.0" prefWidth="206.0" promptText="New Name" styleClass="editfield" stylesheets="@css/userUI.css" />
+                              <Button fx:id="editNameButton" layoutX="189.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onNameEditButton" styleClass="editButton" stylesheets="@css/userUI.css" text="Edit" textFill="WHITE" />
+                              <Button fx:id="cancelEditNameButton" layoutX="22.0" layoutY="104.0" mnemonicParsing="false" onMouseClicked="#onNameCancelButton" styleClass="cancelButton" stylesheets="@css/userUI.css" text="Cancel" textFill="WHITE" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                        <Pane fx:id="editAddressPane" prefHeight="202.0" prefWidth="240.0" stylesheets="@css/userUI.css" visible="false" GridPane.rowIndex="1">
+                           <children>
+                              <Label layoutX="22.0" layoutY="14.0" prefHeight="42.0" prefWidth="150.0" text="Edit Address">
+                                 <font>
+                                    <Font name="Chalkboard" size="25.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="newAddress" layoutX="21.0" layoutY="56.0" prefHeight="32.0" prefWidth="206.0" promptText="New Address" styleClass="editfield" stylesheets="@css/userUI.css" />
+                              <Button fx:id="editNewAddress" layoutX="189.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onAddressEditButton" styleClass="editButton" stylesheets="@css/userUI.css" text="Edit" textFill="WHITE" />
+                              <Button fx:id="cancelEditAddressButton" layoutX="22.0" layoutY="100.0" mnemonicParsing="false" onMouseClicked="#onAddressCancelButton" styleClass="cancelButton" stylesheets="@css/userUI.css" text="Cancel" textFill="WHITE" />
+                           </children>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </GridPane.margin>
+                        </Pane>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="52.0" layoutY="71.0" prefHeight="48.0" prefWidth="434.0" styleClass="header-color" stylesheets="@css/userUI.css" text="Personal Information">
+                     <font>
+                        <Font name="Chalkboard" size="37.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="editPwdPane" layoutX="110.0" layoutY="257.0" prefHeight="415.0" prefWidth="395.0" stylesheets="@css/userUI.css" visible="false">
+                     <children>
+                        <PasswordField fx:id="newPwd" layoutX="72.0" layoutY="173.0" prefHeight="40.0" prefWidth="250.0" promptText="New Password" />
+                        <Button fx:id="change" layoutX="160.0" layoutY="306.0" mnemonicParsing="false" onMouseClicked="#onSetConFirmPass" prefHeight="34.0" prefWidth="88.0" styleClass="button1" stylesheets="@css/loginUI.css" text="Change" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="88.0" layoutY="75.0" prefHeight="29.0" prefWidth="252.0" text="CHANGE PASSWORD">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="185.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/unlock.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="cancel" layoutX="180.0" layoutY="366.0" onMouseClicked="#onCancelPwdForm" prefHeight="20.0" prefWidth="50.0" styleClass="cancel-button" text="Cancel" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="currPwd" layoutX="69.0" layoutY="120.0" prefHeight="40.0" prefWidth="252.0" promptText="Password" />
+                        <PasswordField fx:id="confirmPwd" layoutX="72.0" layoutY="230.0" prefHeight="40.0" prefWidth="250.0" promptText="Confirm Password" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </Pane>
+                  <Pane fx:id="vipAccount" layoutX="50.0" layoutY="124.0" prefHeight="75.0" prefWidth="506.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/quality.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="20.0" prefHeight="31.0" prefWidth="174.0" stylesheets="@css/userUI.css" text="Vip Account" textFill="#141212">
+                           <font>
+                              <Font name="Chalkboard" size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="orange" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="vipPointLabel" alignment="CENTER" layoutX="358.0" layoutY="16.0" prefHeight="39.0" prefWidth="157.0" stylesheets="@css/userUI.css" textFill="#141212">
+                           <font>
+                              <Font name="Chalkboard" size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="white-bg" />
+                              <String fx:value="orange" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="regularAccount" layoutX="60.0" layoutY="134.0" prefHeight="75.0" prefWidth="506.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/second-rank.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="20.0" prefHeight="31.0" prefWidth="203.0" stylesheets="@css/userUI.css" text="Regular Account" textFill="#141212">
+                           <font>
+                              <Font name="Chalkboard" size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="grey" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="guestAccount" layoutX="58.0" layoutY="136.0" prefHeight="75.0" prefWidth="506.0">
+                     <children>
+                        <ImageView fitHeight="47.0" fitWidth="46.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icon/third-rank.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="61.0" layoutY="20.0" prefHeight="31.0" prefWidth="203.0" stylesheets="@css/userUI.css" text="Guest Account" textFill="#141212">
+                           <font>
+                              <Font name="Chalkboard" size="24.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                              <String fx:value="bronze" />
+                           </styleClass>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="26.0" layoutY="36.0" prefHeight="32.0" prefWidth="279.0">
+                     <children>
+                        <Label layoutX="24.0" layoutY="1.0" styleClass="header-color" stylesheets="@css/userUI.css" text="Team 11">
+                           <font>
+                              <Font name="Chalkboard" size="20.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="3.0" layoutY="5.0" startX="100.0" startY="17.085674285888672" />
+                        <Label layoutX="109.0" layoutY="1.0" prefHeight="26.0" prefWidth="186.0" styleClass="header-color" stylesheets="@css/userUI.css" text="Profile">
+                           <font>
+                              <Font name="Chalkboard" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Pane fx:id="loaderPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="450.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/loader.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
